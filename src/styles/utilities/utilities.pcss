@@ -1,0 +1,22 @@
+@layer utilities {
+  .ellipsis {
+    @apply inline truncate;
+  }
+
+  .inheritCursors * {
+    cursor: inherit !important;
+  }
+
+  .hideScrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .chartWidth {
+    width: calc(100% - 197px - 29px - 23px);
+  }
+}

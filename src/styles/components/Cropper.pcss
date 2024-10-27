@@ -1,0 +1,17 @@
+@layer components {
+  .FileCropper .cropper {
+    &-face {
+      @apply rounded-full opacity-20;
+    }
+
+    &-view-box {
+      @apply rounded-full outline-none;
+    }
+
+    &-line,
+    &-point,
+    &-center {
+      @apply hidden;
+    }
+  }
+}

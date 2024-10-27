@@ -1,0 +1,54 @@
+@layer components {
+  .ToastLC {
+    &[data-state='open'] {
+      animation: toastLCSlideIn 500ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    &[data-state='closed'] {
+      animation: toastLCHide 300ms ease-in-out;
+    }
+
+    &[data-swipe='end'] {
+      animation: toastLCSlideOut 100ms ease-out;
+    }
+
+    &[data-swipe='move'] {
+      transform: translateX(var(--radix-toast-swipe-move-x));
+    }
+
+    &[data-swipe='cancel'] {
+      transform: translateX(0);
+      transition: transform 200ms ease-out;
+    }
+  }
+
+  @keyframes toastLCSlideOut {
+    from {
+      transform: translateX(var(--radix-toast-swipe-end-x));
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes toastLCSlideIn {
+    from {
+      transform: translateX(calc(-100% + 24px));
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes toastLCHide {
+    from {
+      max-height: 82px;
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+      max-height: 0;
+      transform: translate(-100%);
+    }
+  }
+}

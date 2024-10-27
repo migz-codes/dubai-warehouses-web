@@ -1,0 +1,73 @@
+@layer components {
+  .Date {
+    @apply w-full h-full;
+
+    .react-datepicker {
+      @apply w-[272px] pb-[16px] border-none shadow-xl !rounded-[8px] rounded-r-0 relative;
+
+      &-wrapper {
+        @apply w-full h-full;
+      }
+
+      &__input-container {
+        @apply w-full h-full;
+      }
+
+      &__month-container {
+        @apply w-full h-full bg-transparent;
+
+        .react-datepicker__header {
+          @apply !m-0 !p-0 !rounded-0 !rounded-t-[8px] w-full flex flex-col max-h-none border-none bg-[#fff];
+
+          .react-datepicker__day-names {
+            @apply p-0 m-0 grid grid-cols-7 px-[10px] w-full items-center justify-center;
+
+            .react-datepicker__day-name {
+              @apply font-secondary font-[400] text-[10px] leading-[10px] text-[#B4B3B8] p-0 m-0 h-auto w-auto;
+            }
+          }
+        }
+
+        .react-datepicker__month {
+          @apply p-0 m-0 gap-[8px] flex flex-col pt-[16px];
+
+          .react-datepicker__week {
+            @apply p-0 m-0 grid grid-cols-7 px-[10px] w-full items-center justify-center;
+
+            .react-datepicker__day {
+              @apply font-secondary font-[400] text-[12px] text-[#787988] p-0 m-0 flex items-center justify-center h-[26px] w-[26px] rounded-full mx-auto;
+
+              &:hover {
+                @apply rounded-full text-[#000] bg-[#F0F0F0];
+              }
+
+              &--keyboard-selected {
+                @apply bg-[#FFF] text-[#787988];
+              }
+
+              &--selected {
+                @apply bg-[#8E14FF] text-[#FFF];
+
+                &:hover {
+                  @apply rounded-full text-[#FFF] bg-[#8E14FF];
+                }
+              }
+
+              &--outside-month {
+                @apply text-[#B4B3B8];
+              }
+
+              &--disabled {
+                @apply line-through text-[#ffa8a8];
+
+                &:hover {
+                  @apply bg-transparent text-[#ffa8a8];
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@layer components {
+  .HiddenScrollbar {
+    &,
+    * {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+}

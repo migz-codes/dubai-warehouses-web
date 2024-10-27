@@ -1,0 +1,53 @@
+@layer components {
+  .DateHour {
+    @apply Date;
+
+    .react-datepicker {
+      @apply h-[282px] w-[272px] !rounded-b-0
+       nsm:!rounded-r-0 nsm:!rounded-bl-[8px];
+
+      &__month-container {
+        @apply w-[272px];
+      }
+
+      &__time-container {
+        @apply shadow-lg flex flex-col border-none absolute
+          bottom-0 left-0 translate-y-full rounded-[8px] overflow-hidden rounded-t-0 h-[282px] w-[272px]
+          nsm:!bottom-auto nsm:!left-auto nsm:!top-0 nsm:!right-0 nsm:!translate-x-full nsm:!rounded-l-0 nsm:!translate-y-0 nsm:!w-[112px] nsm:!rounded-tr-[8px];
+
+        .react-datepicker__header {
+          @apply !m-0 !p-0 !rounded-0 w-full flex flex-col max-h-none bg-[#fff] border-none;
+
+          .react-datepicker-time__header {
+            @apply font-secondary font-[300] text-[13px] leading-[13px] text-[#858696] h-[30px] flex items-center justify-center my-[4px];
+          }
+        }
+
+        .react-datepicker__time {
+          @apply flex-1 rounded-br-[8px];
+
+          .react-datepicker__time-box {
+            @apply !m-0 !w-full px-[2px] h-full rounded-br-[8px];
+
+            .react-datepicker__time-list {
+              @apply m-0 flex flex-col w-full gap-[8px] SecondaryScrollbar;
+
+              &::-webkit-scrollbar {
+                @apply h-[4px] w-[4px];
+              }
+
+              .react-datepicker__time-list-item {
+                @apply mx-[12px] !h-[30px] flex items-center justify-center rounded-[12px] font-secondary font-[300] text-[10px] leading-[30px]
+                nsm:!leading-[12px];
+
+                &--selected {
+                  @apply !text-[#FFF] !bg-[#8E14FF];
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

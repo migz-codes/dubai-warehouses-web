@@ -1,0 +1,28 @@
+@layer components {
+  .DateRange {
+    @apply Date;
+
+    .react-datepicker {
+      @apply w-[272px] flex flex-col
+        nsm3:flex-row nsm3:!w-[544px];
+
+      &__day {
+        &--in-range,
+        &--in-selecting-range {
+          @apply !bg-[#C689FF] !text-[#FFF];
+        }
+
+        &--range-start,
+        &--range-end,
+        &--selecting-range-start,
+        --selecting-range-end {
+          @apply !bg-[#8E14FF] !text-[#FFF];
+        }
+
+        &--outside-month {
+          @apply !opacity-0;
+        }
+      }
+    }
+  }
+}

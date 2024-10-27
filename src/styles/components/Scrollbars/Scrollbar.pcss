@@ -1,0 +1,26 @@
+@layer components {
+  .scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: theme('colors.secondary.500') transparent;
+
+    &::-webkit-scrollbar {
+      @apply h-[8px] w-[8px];
+
+      &-track {
+        @apply rounded-[10px] bg-transparent;
+      }
+
+      &-thumb {
+        @apply rounded-[10px] bg-[#FF666F];
+
+        &:hover {
+          @apply bg-[#ff5964];
+        }
+
+        &:active {
+          @apply bg-[#ff5964];
+        }
+      }
+    }
+  }
+}

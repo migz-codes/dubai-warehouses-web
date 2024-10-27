@@ -1,0 +1,40 @@
+@layer components {
+  .layoutWidth {
+    width: calc(90% - 140px);
+  }
+
+  .layoutWidthFull {
+    @media screen and (min-width: 1200px) {
+      width: calc(100% - 140px);
+    }
+  }
+
+  .layoutPaddingLeft {
+    padding-left: calc(((100vw - 1160px) / 2) - 70px);
+  }
+
+  .layoutPaddingRight {
+    padding-right: calc(((100vw - 1160px) / 2) - 70px);
+  }
+
+  .layoutPaddingLeftProducts {
+    padding-left: calc(((100vw - 1160px) / 2) - 70px - 8px);
+  }
+
+  .layoutPaddingRightProducts {
+    padding-right: calc(((100vw - 1160px) / 2) + 140px + 70px - 8px);
+  }
+
+  .content {
+    @apply w-full mx-auto overflow-visible max-w-[1160px] px-[16px]
+      nxs:px-[24px]
+      nsm:w-[87.5vw] nsm:mx-auto nsm:px-[0px]
+      nmd:w-full nmd:px-[98px]
+      nxl:!layoutWidth nxl:-translate-x-[70px] nxl:px-10 nxl:z-0
+      nxl3:px-0;
+  }
+
+  .full-content {
+    @apply w-full nxl:layoutWidthFull;
+  }
+}

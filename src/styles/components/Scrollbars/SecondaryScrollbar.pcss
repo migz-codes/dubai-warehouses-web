@@ -1,0 +1,85 @@
+@layer components {
+  .SecondaryScrollbar {
+    &,
+    * {
+      scrollbar-width: thin;
+      scrollbar-color: theme('colors.tertiary.500') transparent;
+
+      &::-webkit-scrollbar {
+        @apply h-[4px] w-[4px];
+
+        &-track {
+          @apply rounded-[10px] bg-transparent;
+        }
+
+        &-thumb {
+          @apply rounded-[10px] bg-tertiary-500;
+
+          &:hover {
+            @apply bg-tertiary-600;
+          }
+
+          &:active {
+            @apply bg-tertiary-600;
+          }
+        }
+      }
+    }
+  }
+
+  .SecondaryScrollbar-gold {
+    &,
+    * {
+      scrollbar-width: thin;
+      scrollbar-color: #ffad00 transparent;
+
+      &::-webkit-scrollbar {
+        @apply h-[4px] w-[4px];
+
+        &-track {
+          @apply rounded-[10px] bg-transparent;
+        }
+
+        &-thumb {
+          @apply rounded-[10px] bg-[#ffad00];
+
+          &:hover {
+            @apply bg-[#ffad00];
+          }
+
+          &:active {
+            @apply bg-[#ffad00];
+          }
+        }
+      }
+    }
+  }
+
+  .SecondaryScrollbar-gray {
+    &,
+    * {
+      scrollbar-width: thin;
+      scrollbar-color: #cccccc transparent;
+
+      &::-webkit-scrollbar {
+        @apply h-[4px] w-[4px];
+
+        &-track {
+          @apply rounded-[10px] bg-transparent;
+        }
+
+        &-thumb {
+          @apply rounded-[10px] bg-[#CCCCCC];
+
+          &:hover {
+            @apply bg-[#CCCCCC];
+          }
+
+          &:active {
+            @apply bg-[#CCCCCC];
+          }
+        }
+      }
+    }
+  }
+}

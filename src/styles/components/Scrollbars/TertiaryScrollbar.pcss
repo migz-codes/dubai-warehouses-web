@@ -1,0 +1,29 @@
+@layer components {
+  .TertiaryScrollbar {
+    &,
+    * {
+      scrollbar-width: thin;
+      scrollbar-color: #ff666f transparent;
+
+      &::-webkit-scrollbar {
+        @apply h-[8px] w-[8px];
+
+        &-track {
+          background: #f5f5f5;
+        }
+
+        &-thumb {
+          @apply rounded-[10px] bg-[#ff666f] bg-clip-content border-[2.5px] border-transparent border-solid;
+
+          &:hover {
+            @apply bg-[#ff5964];
+          }
+
+          &:active {
+            @apply bg-[#ff5964];
+          }
+        }
+      }
+    }
+  }
+}

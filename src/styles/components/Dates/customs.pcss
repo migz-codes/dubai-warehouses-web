@@ -1,0 +1,39 @@
+@layer components {
+  .ReportStartDate {
+    @apply DateHour;
+
+    .react-datepicker-popper {
+      @apply !absolute !bottom-0 !-translate-x-[40px];
+
+      inset: inherit !important;
+    }
+  }
+
+  .ReportEndDate {
+    @apply DateHour !relative;
+
+    .react-datepicker-popper {
+      @apply !absolute !bottom-0 !-translate-x-[40px] nsm:!right-0 nsm:!left-auto nsm:!w-full nsm:!translate-x-[8px];
+
+      inset: inherit !important;
+
+      .react-datepicker {
+        @apply nsm:!absolute nsm:!right-0 nsm:!-translate-x-[112px];
+      }
+    }
+  }
+
+  .ReportGraphDate {
+    @apply Date !relative;
+
+    .react-datepicker-popper {
+      @apply !absolute !right-0 !top-0 !w-full !translate-x-[4px] nmd:!left-0 nmd:!-translate-x-[8px] !z-20;
+
+      inset: inherit !important;
+
+      .react-datepicker {
+        @apply !absolute !right-0 nmd:!left-0;
+      }
+    }
+  }
+}
